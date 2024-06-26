@@ -5,7 +5,7 @@ export ZSH=$HOME/.zsh
 autoload -Uz compinit && compinit
 source <(kubectl completion zsh) # Kubernetes commands
 source <(helm completion zsh) # Helm commands
-source <(ansible completion zsh) # Ansible commands
+# source <(ansible completion zsh) # Ansible commands
 
 # ----- Completion options and styling
 zstyle ':completion:*' menu select # selectable menu
