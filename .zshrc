@@ -19,9 +19,10 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 [[ -f $ZSH/config/history.zsh ]] && source $ZSH/config/history.zsh
 
 # ----- plugins for zsh
-[[ -f $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]] && source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh # auto completion of commands
-[[ -f $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]] && source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh # Syntax highlighting, wrong or non existing command goes red, green is good :).
-[[ -f $ZSH/plugins/zsh-abbr/zsh-abbr.plugin.zsh ]] && source $ZSH/plugins/zsh-abbr/zsh-abbr.plugin.zsh
+[[ -f $ZSH/plugins/plugins.zsh ]] && source $ZSH/plugins/plugins.zsh
+
+# ----- aliases
+[[ -f $ZSH/config/aliases.zsh ]] && source $ZSH/config/aliases.zsh
 
 # ----- initialize starship prompt
 eval "$(starship init zsh)"
