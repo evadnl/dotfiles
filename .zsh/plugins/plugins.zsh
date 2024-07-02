@@ -3,5 +3,7 @@
 [[ -f $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]] && source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh # Syntax highlighting, wrong or non existing command goes red, green is good :).
 [[ -f $ZSH/plugins/zsh-abbr/zsh-abbr.plugin.zsh ]] && source $ZSH/plugins/zsh-abbr/zsh-abbr.plugin.zsh
 
+# ----- zsh-z specific settings
 [[ -f $ZSH/plugins/zsh-z/zsh-z.plugin.zsh ]] && source $ZSH/plugins/zsh-z/zsh-z.plugin.zsh
-autoload -U compinit; compinit # Reload compinit
+export ZSHZ_TILDE=1
+autoload -Uz compinit && compinit # Reload compinit
