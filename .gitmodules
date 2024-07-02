@@ -12,4 +12,4 @@
 	url = https://github.com/agkozak/zsh-z.git
 [submodule ".tmux/plugins/catppuccin"]
 	path = .tmux/plugins/catppuccin
-	url = https://git::@github.com/catppuccin/tmux
+	url = https://github.com/catppuccin/tmux.git
