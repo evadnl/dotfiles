@@ -5,7 +5,7 @@ export ZSH=$HOME/.zsh
 autoload -Uz compinit && compinit
 source <(kubectl completion zsh) # Kubernetes commands
 source <(helm completion zsh) # Helm commands
-# source <(ansible completion zsh) # Ansible commands
+#source <(ansible completion zsh) # Ansible commands
 
 # ----- history for zsh
 [[ -f $ZSH/config/history.zsh ]] && source $ZSH/config/history.zsh
