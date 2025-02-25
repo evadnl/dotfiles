@@ -1,5 +1,5 @@
 ## ----- ZSH Plugins
-[[ -f $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]] && source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh # auto completion of commands
+[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]] && source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh # Syntax highlighting, wrong or non existing command goes red, green is good :).
 
 ## ----- zsh-abbr config
