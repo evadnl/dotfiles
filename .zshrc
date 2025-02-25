@@ -11,7 +11,7 @@ source <(helm completion zsh) # Helm commands
 [[ -f $ZSH/config/history.zsh ]] && source $ZSH/config/history.zsh
 
 # ----- plugins for zsh
-[[ -f $ZSH/plugins/plugins.zsh ]] && source $ZSH/plugins/plugins.zsh
+[[ -f $ZSH/plugins.zsh ]] && source $ZSH/plugins.zsh
 
 # ----- aliases
 [[ -f $ZSH/config/aliases.zsh ]] && source $ZSH/config/aliases.zsh
