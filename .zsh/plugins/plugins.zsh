@@ -3,7 +3,11 @@
 [[ -f $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]] && source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh # Syntax highlighting, wrong or non existing command goes red, green is good :).
 
 ## ----- zsh-abbr config
-[[ -f $ZSH/plugins/zsh-abbr/zsh-abbr.plugin.zsh ]] && source $ZSH/plugins/zsh-abbr/zsh-abbr.plugin.zsh
+[ -f /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh ] && source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
+# abbr autocmpletions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-abbr:$FPATH
+fi
 export ABBR_SET_EXPANSION_CURSOR=1
 
 
