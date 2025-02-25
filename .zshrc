@@ -24,5 +24,8 @@ zstyle ':completion:*' list-colors '' # colorize completion lists
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01' # colorize kill list
 
 
+# ----- initialize zoxide
+eval "$(zoxide init zsh)"
+
 # ----- initialize starship prompt
 eval "$(starship init zsh)"
