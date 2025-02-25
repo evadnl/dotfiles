@@ -11,14 +11,13 @@ Warning: If you already have a present .zshrc file or other files backup these f
 # Clone repo
 git clone https://github.com/evadnl/dotfiles.git
 
-# Load submodules within .gitmodules
-git submodule update --init --recursive
 
-# Install GNU Stow (MacOS)
+# Installi zsh plugins and GNU Stow
+brew install olets/tap/zsh-abbr
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
+brew install fzf
 brew install stow
-
-# Install GNU Stow (Debiani based OS)
-sudo apt install stow
 
 cd ˜/dotfiles
 stow .
