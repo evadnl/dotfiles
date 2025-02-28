@@ -16,6 +16,7 @@ git clone https://github.com/evadnl/dotfiles.git
 brew install olets/tap/zsh-abbr
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
+brew install zoxide
 brew install fzf
 brew install stow
 
