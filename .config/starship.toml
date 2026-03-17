@@ -84,7 +84,9 @@ deleted = "✘"
 style = ""
 
 # ----- LANGUAGES
-# None yet :)
+[python]
+symbol = "P"
+pyenv_version_name = true
 
 # -----  COLOR PALETTES
 [palettes.catppuccin_mocha]
