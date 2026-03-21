@@ -1,4 +1,5 @@
 devbox
+.DS_Store
 .zsh_history
 AWS VPN Client
 AWSVPNClient
