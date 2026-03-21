@@ -1,6 +1,14 @@
 # ----- Set main path to .zsh folder
 export ZSH=$HOME/.zsh
 
+# ----- Source Pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+
+# ----- Source nvm
+ export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # ----- Initialize autocompletion for zsh
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
@@ -26,6 +34,10 @@ zstyle ':completion:*' special-dirs true # Complete . and .. special directories
 zstyle ':completion:*' list-colors '' # colorize completion lists
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01' # colorize kill list
 
+
+# ----- Initialize pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # ----- initialize zoxide
 eval "$(zoxide init zsh)"

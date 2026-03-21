@@ -10,4 +10,7 @@ if type brew &>/dev/null; then
 fi
 export ABBR_SET_EXPANSION_CURSOR=1
 
+## ----- fzf integration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 autoload -Uz compinit && compinit # Reload compinit

@@ -12,13 +12,14 @@ Warning: If you already have a present .zshrc file or other files backup these f
 git clone https://github.com/evadnl/dotfiles.git
 
 
-# Installi zsh plugins and GNU Stow
+# Installi zsh plugins and stow and other things. 
 brew install olets/tap/zsh-abbr
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 brew install zoxide
 brew install fzf
 brew install stow
+brew install pyenv
 
 cd ˜/dotfiles
 stow .
