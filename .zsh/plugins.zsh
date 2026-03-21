@@ -13,4 +13,7 @@ export ABBR_SET_EXPANSION_CURSOR=1
 ## ----- fzf integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+## ------ nix daemon
+[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ] && source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+
 autoload -Uz compinit && compinit # Reload compinit
