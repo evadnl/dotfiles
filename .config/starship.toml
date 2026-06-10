@@ -14,6 +14,7 @@ $directory$character
 right_format = """
 $git_branch\
 $git_status\
+$kubernetes\
 $aws\
 $azure\
 """
@@ -62,6 +63,12 @@ only_with_files = true
 format ="[ $symbol]($style)"
 style = "Blue bold"
 detect_files =[ "docker-compose.yml", "docker-compose.yaml", "Dockerfile" ]
+
+[kubernetes]
+disabled = false
+symbol = "⎈ "
+style = "bold blue"
+format = '[$symbol$context( \($namespace\))]($style) '
 
 # ----- GIT
 [git_branch]
