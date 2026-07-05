@@ -20,6 +20,7 @@ brew install zoxide
 brew install fzf
 brew install stow
 brew install pyenv
+brew install karabiner-elements
 
 cd ˜/dotfiles
 stow .
