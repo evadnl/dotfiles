@@ -1,6 +1,6 @@
 abbr "flushdns"="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 abbr "k"="kubectl"
-abbr "kdp"="kubectl describe"
+abbr "kd"="kubectl describe"
 abbr "kex"="kubectl exec -it"
 abbr "kgn"="kubectl get nodes"
 abbr "kgp"="kubectl get pods"
