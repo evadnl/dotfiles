@@ -1,21 +1,13 @@
 # ----- Set main path to .zsh folder
 export ZSH=$HOME/.zsh
 
-# ----- Source Pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-
-# ----- Source nvm
- export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 # ----- Initialize autocompletion for zsh
 autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -u
 source <(kubectl completion zsh) # Kubernetes commands
 source <(helm completion zsh) # Helm commands
 #source <(ansible completion zsh) # Ansible commands
-complete -C '/usr/local/bin/aws_completer' aws
+complete -C '/opt/homebrew/bin/aws_completer' aws
 
 
 # ----- history for zsh
@@ -35,12 +27,11 @@ zstyle ':completion:*' list-colors '' # colorize completion lists
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01' # colorize kill list
 
 
-# ----- Initialize pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # ----- initialize zoxide
 eval "$(zoxide init zsh)"
 
 # ----- initialize starship prompt
 eval "$(starship init zsh)"
+
+# logo at startup
+[ -f ~/.config/inqdo_motd.sh ] && source ~/.config/inqdo_motd.sh
