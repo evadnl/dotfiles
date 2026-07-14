@@ -33,5 +33,9 @@ eval "$(zoxide init zsh)"
 # ----- initialize starship prompt
 eval "$(starship init zsh)"
 
+# ----- Age key
+[ -f ~/.config/sops/age/keys.txt ] && export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
+
+
 # logo at startup
 [ -f ~/.config/inqdo_motd.sh ] && source ~/.config/inqdo_motd.sh
