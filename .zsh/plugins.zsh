@@ -11,17 +11,13 @@ export ABBR_SET_EXPANSION_CURSOR=1
 ## ----- fzf integration
 [ -f $ZSH/config/fzf.zsh ] && source $ZSH/config/fzf.zsh
 
-## ----- nvm (lazy-loaded — sourced on first use to keep startup fast)
-export NVM_DIR="$HOME/.nvm"
+## ----- nvm (nvm.sh sourced lazily; default node is already on PATH via ~/.zshenv)
 _load_nvm() {
-  unset -f nvm node npm npx 2>/dev/null
+  unset -f nvm 2>/dev/null
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 }
-for _cmd in nvm node npm npx; do
-  eval "${_cmd}() { _load_nvm; ${_cmd} \"\$@\"; }"
-done
-unset _cmd
+nvm() { _load_nvm; nvm "$@"; }
 
 ## ----- pyenv (lazy-loaded — initialized on first use to keep startup fast)
 export PATH="$HOME/.pyenv/bin:$PATH"
