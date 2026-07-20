@@ -26,3 +26,10 @@ export NVM_DIR="$HOME/.nvm"
   # Idempotent prepend (nested shells re-source .zshenv)
   [[ ":$PATH:" == *":$bin:"* ]] || path=("$bin" $path)
 }
+
+export PYENV_ROOT="$HOME/.pyenv"
+
+# Put pyenv's shims on PATH so real python/python3/pip/pip3 exist in EVERY shell
+# (non-interactive included). Shims honor .python-version and the global version on their
+# own; `pyenv init` shell integration stays lazy in .zsh/plugins.zsh.
+[[ -d $PYENV_ROOT/shims && ":$PATH:" != *":$PYENV_ROOT/shims:"* ]] && path=("$PYENV_ROOT/shims" $path)

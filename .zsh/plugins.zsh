@@ -19,17 +19,13 @@ _load_nvm() {
 }
 nvm() { _load_nvm; nvm "$@"; }
 
-## ----- pyenv (lazy-loaded — initialized on first use to keep startup fast)
-export PATH="$HOME/.pyenv/bin:$PATH"
+## ----- pyenv (init sourced lazily; python shims are already on PATH via ~/.zshenv)
 _load_pyenv() {
-  unset -f pyenv python python3 pip pip3 2>/dev/null
+  unset -f pyenv 2>/dev/null
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 }
-for _cmd in pyenv python python3 pip pip3; do
-  eval "${_cmd}() { _load_pyenv; ${_cmd} \"\$@\"; }"
-done
-unset _cmd
+pyenv() { _load_pyenv; pyenv "$@"; }
 
 ## ----- Windsurf (Codeium) CLI — only if installed
 [ -d "$HOME/.codeium/windsurf" ] && export PATH="$HOME/.codeium/windsurf/bin:$PATH"
