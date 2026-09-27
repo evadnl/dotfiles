@@ -1,0 +1,38 @@
+{
+  "title": "Swap §/± and `/~ keys (internal keyboard only)",
+  "rules": [
+    {
+      "description": "Swap the §/± key and the `/~ key, built-in keyboard only",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [ { "key_code": "non_us_backslash" } ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [ { "is_built_in_keyboard": true } ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "non_us_backslash",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [ { "key_code": "grave_accent_and_tilde" } ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [ { "is_built_in_keyboard": true } ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
