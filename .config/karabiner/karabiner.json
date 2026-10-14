@@ -215,6 +215,20 @@
                                 "description": "Window: next window (same app)",
                                 "from": { "key_code": "p", "modifiers": { "optional": ["any"] } },
                                 "to": [{ "key_code": "grave_accent_and_tilde", "modifiers": ["right_command"] }]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [{ "type": "variable_if", "name": "hyper_sublayer_w", "value": 1 }],
+                                "description": "Window: move to display above",
+                                "from": { "key_code": "open_bracket", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=previous-display" }]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [{ "type": "variable_if", "name": "hyper_sublayer_w", "value": 1 }],
+                                "description": "Window: move to display below",
+                                "from": { "key_code": "close_bracket", "modifiers": { "optional": ["any"] } },
+                                "to": [{ "shell_command": "open -g rectangle://execute-action?name=next-display" }]
                             }
                         ]
                     }
